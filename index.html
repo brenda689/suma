@@ -1,0 +1,98 @@
+<!--hola este es un comentario -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>Mi primera Aplicacion movil</title>
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css">
+  <link rel="stylesheet" type="text/css" href="css/mystilo.css">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+
+  <!--DOM documnet object model -->
+
+  <script type="text/javascript">
+  
+  $(document).ready(function(){
+   // alert("Hola Mundo");
+   $("#btnSumar").click(function(){
+
+   var n1=parseInt($("#num1").val());
+   var n2=parseInt($("#num2").val());
+   var Suma=n1+n2;
+   //alert("El resultado de la suma es:"+Suma);
+   $("#resultado").val(Suma);
+
+   });
+  });
+    
+  </script>
+
+</head>
+    <body>
+      <div data-role="page" id="Principal" data-theme="b">
+      <div data-role="header">
+	    <p> Principal </p>
+</div>
+   <div data-role="Content">
+      <p> Contenido de la aplicacion </p>
+	      <a href="#Contacto"data-role="button" data-transition="slide">Contacto Slide</a>
+        <a href="#Contacto"data-role="button" data-transition="slideup">Contacto SlideUp</a>
+        <a href="#Contacto"data-role="button" data-transition="slidedown">Contacto SlideDown</a>
+        <a href="#Contacto"data-role="button" data-transition="pop">Contacto Slide Pop</a>
+        <a href="#Contacto"data-role="button" data-transition="flip">Contacto Slide Flip</a>
+        <a href="#Contacto"data-role="button" data-transition="flow">Contacto Slide Flow</a>
+        <a href="#Contacto"data-role="button" data-transition="slidefade">Contacto SlideFade</a>
+        <a href="#Contacto"data-role="button" data-transition="turn">Contacto Turn</a>
+        <a href="#Suma"data-role="button" data-transition="turn">Calcular Suma</a>
+   </div>
+       <div data-role="footer">
+    <a href="www.facebook.com" class="ui-btn ui-icon-plus ui-btn-icon-top">Agregar a Facebook</a>
+              <a href="www.twitter.com" class="ui-btn ui-icon-plus ui-btn-icon-bottom">Agregar a Twitter</a>
+                <a href="www.instagram.com" class="ui-btn ui-icon-plus ui-btn-icon-left">Agregar a Instragram</a>
+      </div>
+     </div>
+
+
+<!--Segunda parte transiciones y botones-->
+
+    <div data-role="page" id="Contacto" data-theme="a">
+        <div data-role="header">
+        <a href="#Principal" class="ui-btn ui-icon-home ui-btn-icon-left" data-transition="pop">Principal</a>
+
+            <p> Contacto </p>
+            <a href="#Suma" class="ui-btn ui-icon-plus ui-btn-icon-right">Suma</a>
+
+        </div>
+   <div data-role="Content">
+            <p> Brenda Gonzalez Palestina </p>
+            <p>dabren.689.45@gmail.com</p>
+   </div>
+       <div data-role="footer">
+            <a href="www.facebook.com" class="ui-btn ui-icon-plus ui-btn-icon-top">Agregar a Facebook</a>
+              <a href="www.twitter.com" class="ui-btn ui-icon-plus ui-btn-icon-bottom">Agregar a Twitter</a>
+                <a href="www.instagram.com" class="ui-btn ui-icon-plus ui-btn-icon-left">Agregar a Instragram</a>
+   </div>
+   </div>
+
+<!--Suma-->
+
+    <div data-role="page" id="Suma">
+    <div data-role="header">
+            <p> Operacion Suma</p>
+    </div>
+        <div data-role="Content">
+              <input type="text" id="num1" placeholder="Escribe un numero">
+              <input type="text" id="num2" placeholder="Escribe un segundo numero">
+              <input type="" id="resultado" placeholder="Resultado">
+              <input type="button" id="btnSumar" value="Calcular Suma">
+        </div>
+        <div data-role="footer">
+               <a href="www.facebook.com" class="ui-btn ui-icon-plus ui-btn-icon-top">Agregar a Facebook</a>
+              <a href="www.twitter.com" class="ui-btn ui-icon-plus ui-btn-icon-bottom">Agregar a Twitter</a>
+                <a href="www.instagram.com" class="ui-btn ui-icon-plus ui-btn-icon-left">Agregar a Instragram</a>
+        </div>
+      </div>
+    </body>
+</html>
